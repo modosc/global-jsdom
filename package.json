@@ -7,7 +7,13 @@
     "email": "jon@divisionbyzero.com",
     "url": "https://github.com/modosc"
   },
-  "browser": "browser.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "files": [
+    "lib/*",
+    "es/*"
+  ],
   "bugs": {
     "url": "https://github.com/modosc/global-jsdom/issues"
   },
@@ -15,9 +21,22 @@
     "Rico Sta. Cruz <rico@ricostacruz.com>"
   ],
   "devDependencies": {
-    "jsdom": "^11.2.0",
-    "standard": "^10.0.3",
-    "tape": "^4.8.0"
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "cross-env": "^5.1.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-unicorn": "^2.1.2",
+    "jsdom": "^11.3.0",
+    "mocha": "^4.0.1",
+    "rimraf": "^2.6.2"
   },
   "homepage": "https://github.com/modosc/global-jsdom#readme",
   "keywords": [
@@ -26,7 +45,6 @@
     "test"
   ],
   "license": "MIT",
-  "main": "index.js",
   "peerDependencies": {
     "jsdom": ">=10.0.0, <12"
   },
@@ -35,6 +53,12 @@
     "url": "git+https://github.com/modosc/global-jsdom.git"
   },
   "scripts": {
-    "test": "node test.js && standard"
+    "test": "cross-env BABEL_ENV=commonjs mocha --require babel-register --require test/setup.js test/*.test.js",
+    "lint": "eslint src/ test/",
+    "lint:fix": "eslint --fix src/ test/",
+    "clean": "rimraf lib es",
+    "build": "npm run clean && npm run build:commonjs && npm run build:es",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --source-maps",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es --source-maps"
   }
 }

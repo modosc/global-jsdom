@@ -2,8 +2,7 @@
 
 > Enables DOM in Node.js
 
-global-jsdom will inject `document`, `window` and other DOM API into your Node.js environment. Useful for running, in Node.js, tests that are made for browsers.
-
+`global-jsdom` will inject `document`, `window` and other DOM API into your Node.js environment. This allows you to run browser tests in Node.js. The specific attributes set on `global` come directly from the `jsdom` version you have installed.
 ## Install
 
 Requires [jsdom][] v10 or above.
@@ -23,9 +22,12 @@ require('global-jsdom')()
 
 // you can now use the DOM
 document.body.innerHTML = 'hello'
+
+// you can also access the current jsdom instance
+global.jsdom.reconfigure()
 ```
 
-You may also pass parameters to jsdomGlobal() like so: `require('global-jsdom')(html, options)`.
+You may also pass parameters to globalJsdom() like so: `require('global-jsdom')(html, options)`.
 Check the [jsdom.jsdom()][] documentation for valid values for the `options` parameter.
 
 To clean up after itself, just invoke the function it returns.
@@ -62,11 +64,11 @@ __Advanced:__ For finer control, you can instead add it via [mocha]'s `before` a
 
 ```js
 before(function () {
-  this.jsdom = require('global-jsdom')()
+  this.cleanup = require('global-jsdom')()
 })
 
 after(function () {
-  this.jsdom()
+  this.cleanup()
 })
 ```
 
@@ -85,42 +87,9 @@ import jQuery from 'jquery'
 // ...
 ```
 
-## Browserify
-
-If you use [Browserify] on your tests (eg: [smokestack], [tape-run], [budo], [hihat], [zuul], and so on), doing `require('global-jsdom')()` is a noop. In practice, this means you can use global-jsdom even if your tests are powered by browserify, and your test will now work in both the browser and Node.
-
-[zuul]: https://www.npmjs.com/package/zuul
-[tape-run]: https://www.npmjs.com/package/tape-run
-[budo]: https://github.com/mattdesl/budo
-[hihat]: https://www.npmjs.com/package/hihat
-[smokestack]: https://www.npmjs.com/package/smokestack
-
-* Writing your tests (`test.js`):
-
-  ```js
-  require('global-jsdom')()
-
-  // ...do your tests here
-  ```
-
-* Running it with [smokestack]:
-
-  ```sh
-  browserify test.js | smokestack          # run in a browser
-  node test.js                             # or the console
-  browserify test.js --no-bundle-external  # also works (but why bother?)
-  ```
-
-* Running it with Babel ([babelify] or [babel-cli]):
-
-  ```sh
-  browserify test.js -t babelify | smokestack  # run in a browser (with babel)
-  babel-node test.js                           # or the console
-  ```
-
-[Browserify]: http://browserify.org/
-[babel-cli]: https://babeljs.io/docs/usage/cli/
-[babelify]: https://github.com/babel/babelify
+## Migration from `jsdom-global`
+1. `browserify` support is dropped - I have no way to test this and `webpack` started giving higher priority to the `browser` field in `package.json` than `module`
+2. `global.jsdom` will now be populated with the current `jsdom` instance - if you were using the original `mocha` instructions for `global-jsdom` you may run into issues since you're potentially overwriting the global `jsdom` property. To work around just use a different name (see above).
 
 ## Thanks
 

@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false
+    }],
+  ],
+  "env": {
+    "commonjs": {
+      "presets": ["env"],
+      "plugins": ["add-module-exports"]
+    },
+  },
+}
