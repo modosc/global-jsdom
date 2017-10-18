@@ -29,11 +29,11 @@ describe('jsdom-global', () => {
 
   describe('jsdom', () => {
     it('works', () => {
-      expect(global.jsdom).to.be.undefined
+      expect(global._jsdom).to.be.undefined
       jsdom()
-      expect(global.jsdom).to.exist
+      expect(global._jsdom).to.exist
       const apiMethods = ['serialize', 'nodeLocation', 'runVMScript', 'reconfigure']
-      apiMethods.forEach(m => expect(global.jsdom[m]).to.be.a('function'))
+      apiMethods.forEach(m => expect(global._jsdom[m]).to.be.a('function'))
     })
   })
 

@@ -35,7 +35,7 @@ export default function globalJsdom() {
       return !global[k];
     })));
     // going to add our jsdom instance, see below
-    KEYS.push('jsdom');
+    KEYS.push('_jsdom');
   }
   // eslint-disable-next-line no-return-assign
   KEYS.forEach(function (key) {
@@ -48,7 +48,7 @@ export default function globalJsdom() {
   window.console = global.console;
 
   // add access to our jsdom instance
-  global.jsdom = jsdom;
+  global._jsdom = jsdom;
 
   var cleanup = function cleanup() {
     return KEYS.forEach(function (key) {

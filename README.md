@@ -24,7 +24,7 @@ require('global-jsdom')()
 document.body.innerHTML = 'hello'
 
 // you can also access the current jsdom instance
-global.jsdom.reconfigure()
+global._jsdom.reconfigure()
 ```
 
 You may also pass parameters to globalJsdom() like so: `require('global-jsdom')(html, options)`.
@@ -64,11 +64,11 @@ __Advanced:__ For finer control, you can instead add it via [mocha]'s `before` a
 
 ```js
 before(function () {
-  this.cleanup = require('global-jsdom')()
+  this.jsdom = require('global-jsdom')()
 })
 
 after(function () {
-  this.cleanup()
+  this.jsdom()
 })
 ```
 
@@ -89,7 +89,6 @@ import jQuery from 'jquery'
 
 ## Migration from `jsdom-global`
 1. `browserify` support is dropped - I have no way to test this and `webpack` started giving higher priority to the `browser` field in `package.json` than `module`
-2. `global.jsdom` will now be populated with the current `jsdom` instance - if you were using the original `mocha` instructions for `global-jsdom` you may run into issues since you're potentially overwriting the global `jsdom` property. To work around just use a different name (see above).
 
 ## Thanks
 
