@@ -1,3 +1,9 @@
+## [v4.0.0]
+> Oct 18, 2017
+- Update peerDeps for jsdom 11
+- Add es module export
+- Drop browserify support
+- Add access to global.jsdom instance
 ## [v3.0.2]
 > May  8, 2017
 
