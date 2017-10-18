@@ -1,43 +1,37 @@
-# jsdom-global
+# global-jsdom
 
 > Enables DOM in Node.js
 
-jsdom-global will inject `document`, `window` and other DOM API into your Node.js environment. Useful for running, in Node.js, tests that are made for browsers.
-
-[![Status](https://travis-ci.org/rstacruz/jsdom-global.svg?branch=master)](https://travis-ci.org/rstacruz/jsdom-global "See test builds")
+global-jsdom will inject `document`, `window` and other DOM API into your Node.js environment. Useful for running, in Node.js, tests that are made for browsers.
 
 ## Install
 
-Requires [jsdom][].
+Requires [jsdom][] v11 or above.
 
 ```
-npm install --save-dev --save-exact jsdom jsdom-global
+npm install --save-dev --save-exact jsdom global-jsdom
 ```
 
 [jsdom]: https://github.com/tmpvar/jsdom
-
-## Note
-
-jsdom-global now requires jsdom v10 or above. If you need jsdom v9 and below, use the previous version (`jsdom-global@2`).
 
 ## Usage
 
 Just invoke it to turn your Node.js environment into a DOM environment.
 
 ```js
-require('jsdom-global')()
+require('global-jsdom')()
 
 // you can now use the DOM
 document.body.innerHTML = 'hello'
 ```
 
-You may also pass parameters to jsdomGlobal() like so: `require('jsdom-global')(html, options)`.
+You may also pass parameters to jsdomGlobal() like so: `require('global-jsdom')(html, options)`.
 Check the [jsdom.jsdom()][] documentation for valid values for the `options` parameter.
 
 To clean up after itself, just invoke the function it returns.
 
 ```js
-var cleanup = require('jsdom-global')()
+var cleanup = require('global-jsdom')()
 
 // do things
 
@@ -49,7 +43,7 @@ cleanup()
 In [tape][], run it before your other tests.
 
 ```js
-require('jsdom-global')()
+require('global-jsdom')()
 
 test('your tests', (t) => {
   /* and so on... */
@@ -61,14 +55,14 @@ test('your tests', (t) => {
 __Simple:__ Use Mocha's `--require` option. Add this to the `test/mocha.opts` file (create it if it doesn't exist)
 
 ```
--r jsdom-global/register
+-r global-jsdom/register
 ```
 
 __Advanced:__ For finer control, you can instead add it via [mocha]'s `before` and `after` hooks.
 
 ```js
 before(function () {
-  this.jsdom = require('jsdom-global')()
+  this.jsdom = require('global-jsdom')()
 })
 
 after(function () {
@@ -82,10 +76,10 @@ after(function () {
 
 ## ES2015
 
-If you prefer to use `import` rather than `require`, you might want to use `jsdom-global/register` instead. Place it on top of your other import calls.
+If you prefer to use `import` rather than `require`, you might want to use `global-jsdom/register` instead. Place it on top of your other import calls.
 
 ```js
-import 'jsdom-global/register'
+import 'global-jsdom/register'
 import React from 'react'
 import jQuery from 'jquery'
 // ...
@@ -93,7 +87,7 @@ import jQuery from 'jquery'
 
 ## Browserify
 
-If you use [Browserify] on your tests (eg: [smokestack], [tape-run], [budo], [hihat], [zuul], and so on), doing `require('jsdom-global')()` is a noop. In practice, this means you can use jsdom-global even if your tests are powered by browserify, and your test will now work in both the browser and Node.
+If you use [Browserify] on your tests (eg: [smokestack], [tape-run], [budo], [hihat], [zuul], and so on), doing `require('global-jsdom')()` is a noop. In practice, this means you can use global-jsdom even if your tests are powered by browserify, and your test will now work in both the browser and Node.
 
 [zuul]: https://www.npmjs.com/package/zuul
 [tape-run]: https://www.npmjs.com/package/tape-run
@@ -104,7 +98,7 @@ If you use [Browserify] on your tests (eg: [smokestack], [tape-run], [budo], [hi
 * Writing your tests (`test.js`):
 
   ```js
-  require('jsdom-global')()
+  require('global-jsdom')()
 
   // ...do your tests here
   ```
@@ -130,12 +124,4 @@ If you use [Browserify] on your tests (eg: [smokestack], [tape-run], [budo], [hi
 
 ## Thanks
 
-**jsdom-global** © 2016+, Rico Sta. Cruz. Released under the [MIT] License.<br>
-Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
-
-> [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
-> GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
-> Twitter [@rstacruz](https://twitter.com/rstacruz)
-
-[MIT]: http://mit-license.org/
-[contributors]: http://github.com/rstacruz/jsdom-global/contributors
+original code forked from [jsdom-global](https://github.com/rstacruz/jsdom-global)

@@ -1,18 +1,25 @@
 {
-  "name": "jsdom-global",
+  "name": "global-jsdom",
   "description": "Enable DOM in Node.js",
-  "version": "3.0.2",
-  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
+  "version": "4.0.0",
+  "author": {
+    "name": "jonathan schatz",
+    "email": "jon@divisionbyzero.com",
+    "url": "https://github.com/modosc"
+  },
   "browser": "browser.js",
   "bugs": {
-    "url": "https://github.com/rstacruz/jsdom-global/issues"
+    "url": "https://github.com/modosc/global-jsdom/issues"
   },
+  "contributors": [
+    "Rico Sta. Cruz <rico@ricostacruz.com>"
+  ],
   "devDependencies": {
     "jsdom": "~10.0.0",
     "standard": "~10.0.2",
     "tape": "~4.6.3"
   },
-  "homepage": "https://github.com/rstacruz/jsdom-global#readme",
+  "homepage": "https://github.com/modosc/global-jsdom#readme",
   "keywords": [
     "dom",
     "jsdom",
@@ -25,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rstacruz/jsdom-global.git"
+    "url": "git+https://github.com/modosc/global-jsdom.git"
   },
   "scripts": {
     "test": "node test.js && standard"
