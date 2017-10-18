@@ -6,7 +6,7 @@ global-jsdom will inject `document`, `window` and other DOM API into your Node.j
 
 ## Install
 
-Requires [jsdom][] v11 or above.
+Requires [jsdom][] v10 or above.
 
 ```
 npm install --save-dev --save-exact jsdom global-jsdom

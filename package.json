@@ -15,9 +15,9 @@
     "Rico Sta. Cruz <rico@ricostacruz.com>"
   ],
   "devDependencies": {
-    "jsdom": "~10.0.0",
-    "standard": "~10.0.2",
-    "tape": "~4.6.3"
+    "jsdom": "^11.2.0",
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
   },
   "homepage": "https://github.com/modosc/global-jsdom#readme",
   "keywords": [
@@ -28,7 +28,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "jsdom": ">=10.0.0"
+    "jsdom": ">=10.0.0, <12"
   },
   "repository": {
     "type": "git",
