@@ -23,8 +23,8 @@ require('global-jsdom')()
 // you can now use the DOM
 document.body.innerHTML = 'hello'
 
-// you can also access the current jsdom instance
-global._jsdom.reconfigure()
+// you can also access the current jsdom instance through $jsdom
+global.$jsdom.reconfigure()
 ```
 
 You may also pass parameters to globalJsdom() like so: `require('global-jsdom')(html, options)`.
