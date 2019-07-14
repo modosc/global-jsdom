@@ -1,3 +1,16 @@
+## [v5.0.0]
+> Jul 14, 2019
+
+- Handle jsdom 15
+[v5.0.0]: https://github.com/modosc/global-jsdom/compare/v4.3.0...v5.0.0
+
+
+## [v4.3.0]
+> Jul 14, 2019
+
+- Update deps
+[v4.3.0]: https://github.com/modosc/global-jsdom/compare/v4.2.0...v4.3.0
+
 ## [v4.2.0]
 > Oct 19, 2017
 
