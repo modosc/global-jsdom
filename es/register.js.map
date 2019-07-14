@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/register.js"],"names":["jsdom"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,SAAlB;;AAEAA","file":"register.js","sourcesContent":["import jsdom from './index'\n\njsdom()\n"]}
+{"version":3,"sources":["../src/register.js"],"names":["jsdom"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,GAAlB;;AAEAA","file":"register.js","sourcesContent":["import jsdom from '.'\n\njsdom()\n"]}

@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/register.js"],"names":[],"mappings":";;AAAA;;;;;;AAEA","file":"register.js","sourcesContent":["import jsdom from './index'\n\njsdom()\n"]}
+{"version":3,"sources":["../src/register.js"],"names":[],"mappings":";;AAAA;;;;;;AAEA","file":"register.js","sourcesContent":["import jsdom from '.'\n\njsdom()\n"]}

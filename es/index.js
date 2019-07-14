@@ -16,7 +16,7 @@ export default function globalJsdom() {
   var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   // Idempotency
-  if (global.navigator && global.navigator.userAgent && global.navigator.userAgent.indexOf('Node.js') > -1 && global.document && typeof global.document.destroy === 'function') {
+  if (global.navigator && global.navigator.userAgent && global.navigator.userAgent.includes('Node.js') && global.document && typeof global.document.destroy === 'function') {
     return global.document.destroy;
   }
 

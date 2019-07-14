@@ -1,4 +1,4 @@
-import jsdom from './index';
+import jsdom from '.';
 
 jsdom();
 //# sourceMappingURL=register.js.map
