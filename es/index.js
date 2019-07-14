@@ -20,6 +20,11 @@ export default function globalJsdom() {
     return global.document.destroy;
   }
 
+  // set a default url if we don't get one - otherwise things explode when we copy localstorage keys
+  if (!options.url) {
+    Object.assign(options, { url: 'http://localhost:3000' });
+  }
+
   var jsdom = new JSDOM(html, options);
   var window = jsdom.window;
   var document = window.document;

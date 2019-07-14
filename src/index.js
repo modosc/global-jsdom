@@ -19,6 +19,9 @@ export default function globalJsdom(html = defaultHtml, options = {}) {
     return global.document.destroy
   }
 
+  // set a default url if we don't get one - otherwise things explode when we copy localstorage keys
+  if (!options.url) { Object.assign(options, { url: 'http://localhost:3000' }) }
+
   const jsdom = new JSDOM(html, options)
   const { window } = jsdom
   const { document } = window
