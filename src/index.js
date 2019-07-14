@@ -3,8 +3,7 @@
  */
 import { JSDOM } from 'jsdom'
 
-const defaultHtml =
-  '<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>'
+const defaultHtml = '<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>'
 
 // define this here so that we only ever dynamically populate KEYS once . this
 // way
@@ -12,11 +11,11 @@ const KEYS = []
 
 export default function globalJsdom(html = defaultHtml, options = {}) {
   // Idempotency
-  if (global.navigator &&
-    global.navigator.userAgent &&
-    global.navigator.userAgent.indexOf('Node.js') > -1 &&
-    global.document &&
-    typeof global.document.destroy === 'function') {
+  if (global.navigator
+    && global.navigator.userAgent
+    && global.navigator.userAgent.includes('Node.js')
+    && global.document
+    && typeof global.document.destroy === 'function') {
     return global.document.destroy
   }
 

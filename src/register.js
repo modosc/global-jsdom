@@ -1,3 +1,3 @@
-import jsdom from './index'
+import jsdom from '.'
 
 jsdom()
