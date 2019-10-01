@@ -34,7 +34,7 @@ describe('jsdom-global', () => {
       jsdom()
       expect(global.$jsdom).to.exist
       const apiMethods = ['serialize', 'nodeLocation', 'runVMScript', 'reconfigure']
-      apiMethods.forEach(m => expect(global.$jsdom[m]).to.be.a('function'))
+      apiMethods.forEach((m) => expect(global.$jsdom[m]).to.be.a('function'))
     })
   })
 

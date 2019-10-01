@@ -31,12 +31,12 @@ export default function globalJsdom(html = defaultHtml, options = {}) {
   // that node already defines
 
   if (KEYS.length === 0) {
-    KEYS.push(...Object.getOwnPropertyNames(window).filter(k => !k.startsWith('_')).filter(k => !global[k]))
+    KEYS.push(...Object.getOwnPropertyNames(window).filter((k) => !k.startsWith('_')).filter((k) => !global[k]))
     // going to add our jsdom instance, see below
     KEYS.push('$jsdom')
   }
   // eslint-disable-next-line no-return-assign
-  KEYS.forEach(key => global[key] = window[key])
+  KEYS.forEach((key) => global[key] = window[key])
 
   // setup document / window / window.console
   global.document = document
@@ -46,7 +46,7 @@ export default function globalJsdom(html = defaultHtml, options = {}) {
   // add access to our jsdom instance
   global.$jsdom = jsdom
 
-  const cleanup = () => KEYS.forEach(key => delete global[key])
+  const cleanup = () => KEYS.forEach((key) => delete global[key])
 
   document.destroy = cleanup
 
