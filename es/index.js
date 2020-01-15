@@ -37,7 +37,7 @@ export default function globalJsdom() {
     KEYS.push.apply(KEYS, _toConsumableArray(Object.getOwnPropertyNames(window).filter(function (k) {
       return !k.startsWith('_');
     }).filter(function (k) {
-      return !global[k];
+      return !(k in global);
     })));
     // going to add our jsdom instance, see below
     KEYS.push('$jsdom');
