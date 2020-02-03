@@ -57,7 +57,7 @@ test('your tests', (t) => {
 __Simple:__ Use Mocha's `--require` option. Add this to the `test/mocha.opts` file (create it if it doesn't exist)
 
 ```
--r global-jsdom/register
+-r global-jsdom/lib/register
 ```
 
 __Advanced:__ For finer control, you can instead add it via [mocha]'s `before` and `after` hooks.
@@ -78,10 +78,10 @@ after(function () {
 
 ## ES2015
 
-If you prefer to use `import` rather than `require`, you might want to use `global-jsdom/register` instead. Place it on top of your other import calls.
+If you prefer to use `import` rather than `require`, you might want to use `global-jsdom/es/register` instead. Place it on top of your other import calls.
 
 ```js
-import 'global-jsdom/register'
+import 'global-jsdom/es/register'
 import React from 'react'
 import jQuery from 'jquery'
 // ...
