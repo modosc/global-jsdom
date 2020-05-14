@@ -1,5 +1,6 @@
 # global-jsdom
 [![npm version](http://img.shields.io/npm/v/global-jsdom.svg?style=flat-square)](https://www.npmjs.com/package/global-jsdom)
+![Node.js CI](https://github.com/modosc/global-jsdom/workflows/Node.js%20CI/badge.svg?branch=master)
 
 > Enables DOM in Node.js
 `global-jsdom` will inject `document`, `window` and other DOM API into your Node.js environment. This allows you to run browser tests in Node.js. The specific attributes set on `global` come directly from the `jsdom` version you have installed.
