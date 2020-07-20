@@ -1,7 +1,7 @@
 {
   "name": "global-jsdom",
   "description": "Enable DOM in Node.js",
-  "version": "6.1.0",
+  "version": "7.0.0-beta.0",
   "author": {
     "name": "jonathan schatz",
     "email": "jon@divisionbyzero.com",
@@ -64,7 +64,9 @@
     "url": "git+https://github.com/modosc/global-jsdom.git"
   },
   "scripts": {
-    "test": "cross-env BABEL_ENV=commonjs mocha --require @babel/register --require test/setup.js test/*.test.js",
+    "test": "npm run test:jsdom && npm run test:examples",
+    "test:jsdom": "cross-env BABEL_ENV=commonjs mocha --require @babel/register --require test/setup.js test/*.test.js",
+    "test:examples": "cd examples && yarn install && yarn upgrade global-jsdom && yarn test; cd ..",
     "lint": "eslint src/ test/",
     "lint:fix": "eslint --fix src/ test/",
     "clean": "rimraf commonjs esm",
