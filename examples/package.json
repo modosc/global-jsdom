@@ -1,0 +1,25 @@
+{
+  "name": "global-jsdom-example",
+  "version": "2.0.0-0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "global-jsdom": "file:..",
+    "mocha": "^8.0.1"
+  },
+  "dependencies": {
+    "jsdom": "^16.3.0"
+  },
+  "scripts": {
+    "node:require": "npx mocha node/test-commonjs.js",
+    "node:import": "npx mocha --require @babel/register node/test-esm.js",
+    "node": "npm run node:require && npm run node:import",
+    "mocha:require": "npx mocha --require global-jsdom/register mocha/test-commonjs.js",
+    "mocha:import": "npx mocha  --require @babel/register --require global-jsdom/register mocha/test-esm.js",
+    "mocha": "npm run mocha:require && npm run mocha:import",
+    "test": "npm run node && npm run mocha"
+  }
+}

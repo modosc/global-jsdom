@@ -1,13 +1,23 @@
-{
-  "presets": [
-    ["env", {
-      "modules": false
-    }],
-  ],
-  "env": {
-    "commonjs": {
-      "presets": ["env"],
-      "plugins": ["add-module-exports"]
-    },
-  },
-}
+  {
+    "comments": false,
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "env": {
+      "es": {
+        "presets": [
+          [
+            "@babel/preset-env",
+            {
+              "modules": false
+            }
+          ]
+        ]
+      },
+      "commonjs": {
+        "plugins": [
+          "add-module-exports"
+        ]
+      }
+    }
+  }
