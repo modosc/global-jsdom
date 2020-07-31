@@ -1,18 +1,28 @@
 {
   "name": "global-jsdom",
   "description": "Enable DOM in Node.js",
-  "version": "6.1.0",
+  "version": "7.0.0-beta.0",
   "author": {
     "name": "jonathan schatz",
     "email": "jon@divisionbyzero.com",
     "url": "https://github.com/modosc"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "jsnext:main": "es/index.js",
+  "type": "commonjs",
+  "main": "./commonjs/index.js",
+  "exports": {
+    ".": {
+      "require": "./commonjs/index.js",
+      "default": "./esm/index.mjs"
+    },
+    "./register": {
+      "require": "./commonjs/register.js",
+      "default": "./esm/register.mjs"
+    }
+  },
+  "module": "./esm/index.mjs",
   "files": [
-    "lib/*",
-    "es/*"
+    "commonjs/*",
+    "esm/*"
   ],
   "bugs": {
     "url": "https://github.com/modosc/global-jsdom/issues"
@@ -21,11 +31,12 @@
     "Rico Sta. Cruz <rico@ricostacruz.com>"
   ],
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
     "babel-eslint": "^10.0.2",
     "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "cross-env": "^7.0.2",
     "eslint": "^7.4.0",
@@ -53,12 +64,14 @@
     "url": "git+https://github.com/modosc/global-jsdom.git"
   },
   "scripts": {
-    "test": "cross-env BABEL_ENV=commonjs mocha --require babel-register --require test/setup.js test/*.test.js",
+    "test": "npm run test:jsdom && npm run test:examples",
+    "test:jsdom": "cross-env BABEL_ENV=commonjs mocha --require @babel/register --require test/setup.js test/*.test.js",
+    "test:examples": "cd examples && yarn install && yarn upgrade global-jsdom && yarn test; cd ..",
     "lint": "eslint src/ test/",
     "lint:fix": "eslint --fix src/ test/",
-    "clean": "rimraf lib es",
-    "build": "npm run clean && npm run build:commonjs && npm run build:es",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --source-maps",
-    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es --source-maps"
+    "clean": "rimraf commonjs esm",
+    "build": "npm run clean && npm run build:commonjs && npm run build:esm",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir commonjs --source-maps",
+    "build:esm": "cross-env BABEL_ENV=es babel src --out-dir esm --source-maps --out-file-extension .mjs"
   }
 }
