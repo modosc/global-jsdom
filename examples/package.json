@@ -14,9 +14,10 @@
     "jsdom": "^16.3.0"
   },
   "scripts": {
+    "node:module": "cd module && mocha test-module.js",
     "node:require": "npx mocha node/test-commonjs.js",
     "node:import": "npx mocha --require @babel/register node/test-esm.js",
-    "node": "npm run node:require && npm run node:import",
+    "node": "npm run node:require && npm run node:import && npm run node:module",
     "mocha:require": "npx mocha --require global-jsdom/register mocha/test-commonjs.js",
     "mocha:import": "npx mocha  --require @babel/register --require global-jsdom/register mocha/test-esm.js",
     "mocha": "npm run mocha:require && npm run mocha:import",
