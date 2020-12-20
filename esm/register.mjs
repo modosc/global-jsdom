@@ -1,3 +1,3 @@
-import jsdom from '.';
+import jsdom from './index.mjs';
 jsdom();
 //# sourceMappingURL=register.mjs.map
