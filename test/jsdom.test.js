@@ -1,4 +1,4 @@
-import jsdom from '../commonjs'
+const jsdom = require('../commonjs')
 
 describe('jsdom-global', () => {
   beforeEach(() => global.document && global.document.destroy && global.document.destroy())
