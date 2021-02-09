@@ -5,7 +5,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    'airbnb-base', 'plugin:unicorn/recommended',
+    'airbnb-base',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -15,7 +15,6 @@ module.exports = {
   plugins: [
     'mocha',
     'babel',
-    'unicorn',
   ],
   rules: {
     indent: [
