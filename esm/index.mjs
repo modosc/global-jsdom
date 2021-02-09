@@ -1,60 +1,54 @@
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+/*
+ * enables jsdom globally.
+ */
+import JSDOM from 'jsdom'
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+const defaultHtml = '<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>'
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+// define this here so that we only ever dynamically populate KEYS once.
 
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+const KEYS = []
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-import { JSDOM } from 'jsdom';
-var defaultHtml = '<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>';
-var KEYS = [];
-export default function globalJsdom() {
-  var html = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultHtml;
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-  if (global.navigator && global.navigator.userAgent && global.navigator.userAgent.includes('Node.js') && global.document && typeof global.document.destroy === 'function') {
-    return global.document.destroy;
+export default function globalJsdom(html = defaultHtml, options = {}) {
+  // Idempotency
+  if (global.navigator
+    && global.navigator.userAgent
+    && global.navigator.userAgent.includes('Node.js')
+    && global.document
+    && typeof global.document.destroy === 'function') {
+    return global.document.destroy
   }
 
-  if (!options.url) {
-    Object.assign(options, {
-      url: 'http://localhost:3000'
-    });
-  }
+  // set a default url if we don't get one - otherwise things explode when we copy localstorage keys
+  if (!options.url) { Object.assign(options, { url: 'http://localhost:3000' }) }
 
-  var jsdom = new JSDOM(html, options);
-  var window = jsdom.window;
-  var document = window.document;
+  const jsdom = new JSDOM.JSDOM(html, options)
+  const { window } = jsdom
+  const { document } = window
+
+  // generate our list of keys by enumerating document.window - this list may vary
+  // based on the jsdom version. filter out internal methods as well as anything
+  // that node already defines
 
   if (KEYS.length === 0) {
-    KEYS.push.apply(KEYS, _toConsumableArray(Object.getOwnPropertyNames(window).filter(function (k) {
-      return !k.startsWith('_');
-    }).filter(function (k) {
-      return !(k in global);
-    })));
-    KEYS.push('$jsdom');
+    KEYS.push(...Object.getOwnPropertyNames(window).filter((k) => !k.startsWith('_')).filter((k) => !(k in global)))
+    // going to add our jsdom instance, see below
+    KEYS.push('$jsdom')
   }
+  // eslint-disable-next-line no-return-assign
+  KEYS.forEach((key) => global[key] = window[key])
 
-  KEYS.forEach(function (key) {
-    return global[key] = window[key];
-  });
-  global.document = document;
-  global.window = window;
-  window.console = global.console;
-  global.$jsdom = jsdom;
+  // setup document / window / window.console
+  global.document = document
+  global.window = window
+  window.console = global.console
 
-  var cleanup = function cleanup() {
-    return KEYS.forEach(function (key) {
-      return delete global[key];
-    });
-  };
+  // add access to our jsdom instance
+  global.$jsdom = jsdom
 
-  document.destroy = cleanup;
-  return cleanup;
+  const cleanup = () => KEYS.forEach((key) => delete global[key])
+
+  document.destroy = cleanup
+
+  return cleanup
 }
-//# sourceMappingURL=index.mjs.map

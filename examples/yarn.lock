@@ -1415,10 +1415,8 @@ glob@7.1.6:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-global-jsdom@7.0.0:
+global-jsdom@../:
   version "7.0.0"
-  resolved "https://registry.yarnpkg.com/global-jsdom/-/global-jsdom-7.0.0.tgz#a46b56ad4a3e398ca4b8b31dbb420cdb5f4b4aee"
-  integrity sha512-1+yYv054WSl0vqweIZnMWwkHVSpffBNajtyRjPf6vqz1jTFANqciBUJ0C3Chg400Dpzo0ljbpZoC8VUtaAsA+Q==
 
 globals@^11.1.0:
   version "11.12.0"

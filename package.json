@@ -45,8 +45,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-mocha": "^8.0.0",
     "jsdom": "^16.0.0",
-    "mocha": "^8.0.1",
-    "rimraf": "^3.0.0"
+    "mocha": "^8.0.1"
   },
   "homepage": "https://github.com/modosc/global-jsdom#readme",
   "keywords": [
@@ -58,6 +57,9 @@
   "peerDependencies": {
     "jsdom": ">=10.0.0, <17"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/modosc/global-jsdom.git"
@@ -66,11 +68,7 @@
     "test": "npm run test:jsdom && npm run test:examples",
     "test:jsdom": "cross-env BABEL_ENV=commonjs mocha --require @babel/register --require test/setup.js test/*.test.js",
     "test:examples": "cd examples && yarn install && yarn upgrade global-jsdom && yarn test; cd ..",
-    "lint": "eslint src/ test/",
-    "lint:fix": "eslint --fix src/ test/",
-    "clean": "rimraf commonjs esm",
-    "build": "npm run clean && npm run build:commonjs && npm run build:esm",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir commonjs --source-maps",
-    "build:esm": "cross-env BABEL_ENV=es babel src --out-dir esm --source-maps --out-file-extension .mjs"
+    "lint": "eslint --ext=js,mjs commonjs/ esm/ test/",
+    "lint:fix": "eslint --ext=js,mjs --fix commonjs/ esm/ test/"
   }
 }

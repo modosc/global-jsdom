@@ -1,3 +1,3 @@
-import chai from 'chai'
+const chai = require('chai')
 
 global.expect = chai.expect
