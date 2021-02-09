@@ -22,7 +22,6 @@ describe('jsdom-global', () => {
       jsdom()
       const div = document.createElement('div')
       div.innerHTML = 'hello'
-      /* eslint-disable-next-line unicorn/prefer-node-append */
       document.body.appendChild(div)
       expect(document.querySelector('body').innerHTML).to.equal('<div>hello</div>')
     })
