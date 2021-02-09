@@ -1,8 +1,4 @@
-"use strict";
+/* eslint-disable */
+const jsdom = require('./index.js')
 
-var _ = _interopRequireDefault(require("."));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-(0, _["default"])();
-//# sourceMappingURL=register.js.map
+jsdom()

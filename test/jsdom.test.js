@@ -1,4 +1,4 @@
-import jsdom from '../src'
+import jsdom from '../commonjs'
 
 describe('jsdom-global', () => {
   beforeEach(() => global.document && global.document.destroy && global.document.destroy())
@@ -42,7 +42,7 @@ describe('jsdom-global', () => {
       expect(global.document).to.be.undefined
       expect(global.alert).to.be.undefined
       // eslint-disable-next-line global-require
-      require('../src/register')
+      require('../commonjs/register')
       expect(global.document).to.exist
       expect(global.alert).to.exist
       global.document.destroy()

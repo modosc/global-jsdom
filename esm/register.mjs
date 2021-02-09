@@ -1,3 +1,4 @@
-import jsdom from './index.mjs';
-jsdom();
-//# sourceMappingURL=register.mjs.map
+/* eslint-disable */
+import jsdom from './index.mjs'
+
+jsdom()

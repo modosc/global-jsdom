@@ -58,6 +58,9 @@
   "peerDependencies": {
     "jsdom": ">=10.0.0, <17"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/modosc/global-jsdom.git"
@@ -68,9 +71,6 @@
     "test:examples": "cd examples && yarn install && yarn upgrade global-jsdom && yarn test; cd ..",
     "lint": "eslint src/ test/",
     "lint:fix": "eslint --fix src/ test/",
-    "clean": "rimraf commonjs esm",
-    "build": "npm run clean && npm run build:commonjs && npm run build:esm",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir commonjs --source-maps",
-    "build:esm": "cross-env BABEL_ENV=es babel src --out-dir esm --source-maps --out-file-extension .mjs"
+    "clean": "rimraf commonjs esm"
   }
 }
