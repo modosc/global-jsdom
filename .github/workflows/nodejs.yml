@@ -36,7 +36,3 @@ jobs:
       run: yarn
     - run: npm run test
     - run: npm run lint
-    - run: npm run build
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: update build with new deps
