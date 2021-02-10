@@ -1,4 +1,5 @@
-const jsdom = require('../commonjs')
+/* eslint-disable-next-line import/extensions */
+import jsdom from '../esm/index.mjs'
 
 describe('jsdom-global', () => {
   beforeEach(() => global.document && global.document.destroy && global.document.destroy())
@@ -38,10 +39,9 @@ describe('jsdom-global', () => {
   })
 
   describe('register', () => {
-    it('works', () => {
+    it('works', async () => {
       expectedKeys.forEach((k) => expect(global[k]).to.be.undefined)
-      // eslint-disable-next-line global-require
-      require('../commonjs/register')
+      await import('../esm/register.mjs')
       expectedKeys.forEach((k) => expect(global[k]).to.exist)
       global.document.destroy()
       expectedKeys.forEach((k) => expect(global[k]).to.be.undefined)

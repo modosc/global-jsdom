@@ -31,14 +31,9 @@
     "Rico Sta. Cruz <rico@ricostacruz.com>"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/register": "^7.10.5",
     "babel-eslint": "^10.0.2",
-    "babel-plugin-add-module-exports": "^1.0.2",
     "chai": "^4.1.2",
-    "cross-env": "^7.0.2",
     "eslint": "^7.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "^5.3.0",
@@ -66,7 +61,9 @@
   },
   "scripts": {
     "test": "npm run test:jsdom && npm run test:examples",
-    "test:jsdom": "cross-env BABEL_ENV=commonjs mocha --require @babel/register --require test/setup.js test/*.test.js",
+    "test:jsdom": "npm run test:jsdom:esm && npm run test:jsdom:commonjs",
+    "test:jsdom:esm": "mocha --require test/setup.mjs test/*.test.mjs",
+    "test:jsdom:commonjs": "mocha --require test/setup.js test/*.test.js",
     "test:examples": "cd examples && yarn install && yarn upgrade global-jsdom && yarn test; cd ..",
     "lint": "eslint --ext=js,mjs commonjs/ esm/ test/",
     "lint:fix": "eslint --ext=js,mjs --fix commonjs/ esm/ test/"

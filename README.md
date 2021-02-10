@@ -6,12 +6,12 @@
 `global-jsdom` will inject `document`, `window` and other DOM API into your Node.js environment. This allows you to run browser tests in Node.js. The specific attributes set on `global` come directly from the `jsdom` version you have installed.
 ## Install
 
-Requires [jsdom][] v10 or above.
+Requires [node][] >= 12 and [jsdom][] >= 10 or above
 
 ```
 npm install --save-dev --save-exact jsdom global-jsdom
 ```
-
+[node]: https://github.com/nodejs/node
 [jsdom]: https://github.com/tmpvar/jsdom
 
 ## Usage
@@ -19,25 +19,57 @@ npm install --save-dev --save-exact jsdom global-jsdom
 Just invoke it to turn your Node.js environment into a DOM environment.
 
 ```js
-require('global-jsdom')()
+// commonjs
+require('global-jsdom/register')
+
+// or es2015
+import 'global-jsdom/register'
 
 // you can now use the DOM
 document.body.innerHTML = 'hello'
 
 // you can also access the current jsdom instance through $jsdom
-global.$jsdom.reconfigure()
+global.$jsdom.reconfigure({})
 ```
 
-You may also pass parameters to globalJsdom() like so: `require('global-jsdom')(html, options)`.
-Check the [jsdom.jsdom()][] documentation for valid values for the `options` parameter.
-
-To clean up after itself, just invoke the function it returns.
-
+## Configuration
+You may pass configuration parameters to `jsdom` like so:
 ```js
-var cleanup = require('global-jsdom')()
+// commonjs
+const globalJsdom = require('global-jsdom')
 
-// do things
+// or es2015
+import globalJsdom from 'global-jsdom'
 
+// then
+globalJsdom(html, options)
+```
+Check the [jsdom.jsdom()][] documentation for valid values for the `options`
+parameter.
+
+### Default Options
+The following set of default options are passed to `jsdom`
+```js
+{
+  // if url isn't set then localStorage breaks with a cryptic error, see
+  // https://github.com/jsdom/jsdom/issues/2304#issuecomment-408320484
+  url: 'http://localhost:3000',
+  // pretendToBeVisual is enabled so that react works, see
+  // https://github.com/jsdom/jsdom#pretending-to-be-a-visual-browser
+  pretendToBeVisual: true,
+}
+```
+### Cleanup
+To clean up the global namespace just invoke the returned function:
+```js
+// commonjs
+const cleanup = require('global-jsdom')()
+
+// es2015
+import globalJsdom from 'global-jsdom'
+const cleanup = globalJsdom()
+
+// do things, then
 cleanup()
 ```
 
@@ -46,7 +78,7 @@ cleanup()
 In [tape][], run it before your other tests.
 
 ```js
-require('global-jsdom')()
+require('global-jsdom/register')
 
 test('your tests', (t) => {
   /* and so on... */

@@ -1,3 +1,11 @@
+## [v8.0.0.beta0]
+> Feb 10, 2021
+
+- **BREAKING CHANGE** `babel` usage removed, Node v12 or greater is required
+- **BREAKING CHANGE** `pretendToBeVisual` is enabled by default, see https://github.com/modosc/global-jsdom/issues/97
+- **BREAKING CHANGE** ES2015 modules are now `.mjs` files, you may need to
+  [enable a node flag](https://nodejs.org/api/esm.html#esm_conditional_exports)
+
 ## [v5.0.0]
 > Jul 14, 2019
 
