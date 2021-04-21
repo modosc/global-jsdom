@@ -1,4 +1,8 @@
-## [v8.0.0.beta0]
+## [v8.1.0]
+- Fix jsdom peer dependency version specifier https://github.com/modosc/global-jsdom/pull/126
+- Update deps
+
+## [v8.0.0]
 > Feb 10, 2021
 
 - **BREAKING CHANGE** `babel` usage removed, Node v12 or greater is required
