@@ -32,7 +32,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.10.5",
-    "babel-eslint": "^10.0.2",
+    "@babel/eslint-parser": "^7.4.14",
     "chai": "^4.1.2",
     "eslint": "^7.4.0",
     "eslint-config-airbnb-base": "^14.0.0",

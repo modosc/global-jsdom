@@ -7,10 +7,14 @@ module.exports = {
   extends: [
     'airbnb-base',
   ],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaVersion: 7,
-    sourceType: 'module',
+    sourceType: "module",
+    allowImportExportEverywhere: false,
+    ecmaFeatures: {
+      globalReturn: false,
+    },
+    requireConfigFile: false
   },
   plugins: [
     'mocha',

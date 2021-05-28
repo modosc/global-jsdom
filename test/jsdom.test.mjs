@@ -41,6 +41,7 @@ describe('jsdom-global', () => {
   describe('register', () => {
     it('works', async () => {
       expectedKeys.forEach((k) => expect(global[k]).to.be.undefined)
+      /* eslint-disable-next-line import/extensions */
       await import('../esm/register.mjs')
       expectedKeys.forEach((k) => expect(global[k]).to.exist)
       global.document.destroy()
