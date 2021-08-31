@@ -1,3 +1,6 @@
+## [v8.2.0]
+- Relax jsdom peer dependency for jsdom 17
+
 ## [v8.1.0]
 - Fix jsdom peer dependency version specifier https://github.com/modosc/global-jsdom/pull/126
 - Update deps

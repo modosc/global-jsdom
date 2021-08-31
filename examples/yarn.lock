@@ -1417,7 +1417,7 @@ glob@7.1.6:
     path-is-absolute "^1.0.0"
 
 global-jsdom@../:
-  version "8.1.0"
+  version "8.2.0"
 
 globals@^11.1.0:
   version "11.12.0"
