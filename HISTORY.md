@@ -1,3 +1,7 @@
+## [v8.4.0]
+- Relax jsdom peer dependency for jsdom 19
+- Update deps
+
 ## [v8.3.0]
 - Relax jsdom peer dependency for jsdom 18
 - Update deps
@@ -42,7 +46,9 @@
 - Don't clobber `global.jsdom`, use `global._jsdom` instead
 [v4.1.0]: https://github.com/modosc/global-jsdom/compare/v4.0.0...v4.1.0
 
-## [v4.0.0]
+## [v8.3.0]
+- Relax jsdom peer dependency for jsdom 18
+- Update deps## [v4.0.0]
 > Oct 18, 2017
 
 - Update peerDeps for jsdom 11
