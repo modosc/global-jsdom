@@ -1,3 +1,7 @@
+## [v8.5.0]
+- Relax jsdom peer dependency for jsdom 20
+- Update deps
+
 ## [v8.4.0]
 - Relax jsdom peer dependency for jsdom 19
 - Update deps
