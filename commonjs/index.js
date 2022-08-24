@@ -35,7 +35,7 @@ module.exports = function globalJsdom(html = defaultHtml, options = {}) {
   // that node already defines
 
   if (KEYS.length === 0) {
-    KEYS.push(...Object.getOwnPropertyNames(window).filter((k) => !k.startsWith('_')).filter((k) => !(k in global)))
+    KEYS.push(...Object.getOwnPropertyNames(window).filter((k) => !k.startsWith('_') && !(k in global)))
     // going to add our jsdom instance, see below
     KEYS.push('$jsdom')
   }
