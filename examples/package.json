@@ -8,10 +8,10 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/register": "^7.10.5",
     "global-jsdom": "../",
-    "mocha": "^8.0.1"
+    "mocha": "^10.0.0"
   },
   "dependencies": {
-    "jsdom": "^18.0.0"
+    "jsdom": "^20.0.0"
   },
   "scripts": {
     "node:module": "cd module && mocha test-module.js",
