@@ -57,12 +57,12 @@
     "url": "git+https://github.com/modosc/global-jsdom.git"
   },
   "scripts": {
-    "test": "npm run test:jsdom && npm run test:examples",
-    "test:jsdom": "npm run test:jsdom:esm && npm run test:jsdom:commonjs",
-    "test:jsdom:esm": "mocha --require test/setup.mjs test/*.test.mjs",
-    "test:jsdom:commonjs": "mocha --require test/setup.js test/*.test.js",
+    "test": "yarn test:jsdom && yarn test:examples",
+    "test:jsdom": "yarn test:jsdom:esm && yarn test:jsdom:commonjs",
+    "test:jsdom:esm": "yarn mocha --require test/setup.mjs test/*.test.mjs",
+    "test:jsdom:commonjs": "yarn mocha --require test/setup.js test/*.test.js",
     "test:examples": "cd examples && yarn install && yarn upgrade global-jsdom && yarn test; cd ..",
-    "lint": "eslint --ext=js,mjs --cache .eslintrc.js examples/ commonjs/ esm/ test/ ",
-    "lint:fix": "eslint --ext=js,mjs --cache --fix .eslintrc.js examples/ commonjs/ esm/ test/"
+    "lint": "yarn eslint --ext=js,mjs --cache .eslintrc.js examples/ commonjs/ esm/ test/ ",
+    "lint:fix": "yarn eslint --ext=js,mjs --cache --fix .eslintrc.js examples/ commonjs/ esm/ test/"
   }
 }
