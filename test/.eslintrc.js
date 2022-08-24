@@ -1,9 +1,8 @@
 module.exports = {
+  extends: '../.eslintrc.js',
   env: {
-    es6: true,
     mocha: true,
   },
-
   rules: {
     // disabled  because eslint doesn't parse chai correctly:
     // https://github.com/eslint/eslint/issues/2102

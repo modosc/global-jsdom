@@ -1,24 +1,18 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
+    es2021: true,
     node: true,
   },
   extends: [
     'airbnb-base',
   ],
-  parser: '@babel/eslint-parser',
   parserOptions: {
-    sourceType: "module",
-    allowImportExportEverywhere: false,
-    ecmaFeatures: {
-      globalReturn: false,
-    },
-    requireConfigFile: false
+    sourceType: 'module',
+    ecmaVersion: 'latest',
   },
   plugins: [
     'mocha',
-    'babel',
   ],
   rules: {
     indent: [
