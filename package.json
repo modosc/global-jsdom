@@ -47,7 +47,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "jsdom": ">=10.0.0 <20"
+    "jsdom": ">=10.0.0 <21"
   },
   "engines": {
     "node": ">=12"
