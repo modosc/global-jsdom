@@ -1,3 +1,10 @@
+## [v8.6.0]
+- (really) fix jsdom peerDep
+- fix(perf): consolidate window key filtering https://github.com/modosc/global-jsdom/pull/256
+- update semver for jsdom in peerDeps (fixes #245) https://github.com/modosc/global-jsdom/pull/259
+- update actions/checkout@v3, actions/setup-node@v3, node-version: 16 https://github.com/modosc/global-jsdom/pull/258
+- remove babel deps
+
 ## [v8.5.0]
 - Relax jsdom peer dependency for jsdom 20
 - Update deps
