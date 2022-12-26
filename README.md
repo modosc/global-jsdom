@@ -73,6 +73,19 @@ const cleanup = globalJsdom()
 cleanup()
 ```
 
+If using `global-jsdom/register` as the entry-point, `cleanup` is exported:
+
+```js
+// commonjs
+const cleanup = require('global-jsdom/register')
+
+// es2015
+import cleanup from 'global-jsdom/register'
+
+// do things, then
+cleanup()
+```
+
 ## Tape
 
 In [tape][], run it before your other tests.
