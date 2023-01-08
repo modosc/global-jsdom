@@ -1,3 +1,7 @@
+## [v8.7.0]
+- Relax jsdom peer dependency for jsdom 21
+- update deps
+
 ## [v8.6.0]
 - (really) fix jsdom peerDep
 - fix(perf): consolidate window key filtering https://github.com/modosc/global-jsdom/pull/256

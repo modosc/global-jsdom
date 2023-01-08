@@ -11,7 +11,7 @@
     "mocha": "^10.0.0"
   },
   "dependencies": {
-    "jsdom": "^20.0.0"
+    "jsdom": "^21.0.0"
   },
   "scripts": {
     "node:module": "cd module && mocha test-module.js",
