@@ -1,0 +1,13 @@
+node_modules
+.vscode
+.eslintcache
+.DS_Store
+
+# yarn v3 stuff
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
