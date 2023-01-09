@@ -1,5 +1,5 @@
 {
-  "name": "global-jsdom-workspace",
+  "name": "global-jsdom",
   "description": "Enable DOM in Node.js",
   "version": "8.7.0",
   "author": {
@@ -7,7 +7,23 @@
     "email": "jon@divisionbyzero.com",
     "url": "https://github.com/modosc"
   },
-  "private": true,
+  "type": "commonjs",
+  "main": "./commonjs/index.js",
+  "exports": {
+    ".": {
+      "require": "./commonjs/index.js",
+      "default": "./esm/index.mjs"
+    },
+    "./register": {
+      "require": "./commonjs/register.js",
+      "default": "./esm/register.mjs"
+    }
+  },
+  "module": "./esm/index.mjs",
+  "files": [
+    "commonjs/*",
+    "esm/*"
+  ],
   "bugs": {
     "url": "https://github.com/modosc/global-jsdom/issues"
   },
@@ -41,12 +57,9 @@
     "url": "git+https://github.com/modosc/global-jsdom.git"
   },
   "scripts": {
-    "test": "yarn workspaces foreach run test",
-    "lint": "yarn eslint --ext=js,mjs --cache .eslintrc.js packages/examples/ packages/global-jsdom",
-    "lint:fix": "yarn eslint --ext=js,mjs --cache --fix .eslintrc.js packages/examples/ packages/global-jsdom"
+    "test": "yarn test:esm && yarn test:commonjs",
+    "test:esm": "yarn mocha --require test/setup.mjs test/*.test.mjs",
+    "test:commonjs": "yarn mocha --require test/setup.js test/*.test.js"
   },
-  "packageManager": "yarn@3.3.1",
-  "workspaces": [
-    "packages/*"
-  ]
+  "packageManager": "yarn@3.3.1"
 }

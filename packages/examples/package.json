@@ -4,14 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/register": "^7.10.5",
-    "global-jsdom": "../",
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/register": "latest",
+    "global-jsdom": "latest",
     "mocha": "^10.0.0"
   },
   "dependencies": {
-    "jsdom": "^21.0.0"
+    "jsdom": ">=10.0.0 <22"
   },
   "scripts": {
     "node:module": "cd module && mocha test-module.js",

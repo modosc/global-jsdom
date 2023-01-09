@@ -31,7 +31,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.10.5":
+"@babel/core@npm:latest":
   version: 7.20.12
   resolution: "@babel/core@npm:7.20.12"
   dependencies:
@@ -1106,7 +1106,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.10.4":
+"@babel/preset-env@npm:latest":
   version: 7.20.2
   resolution: "@babel/preset-env@npm:7.20.2"
   dependencies:
@@ -1206,7 +1206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/register@npm:^7.10.5":
+"@babel/register@npm:latest":
   version: 7.18.9
   resolution: "@babel/register@npm:7.18.9"
   dependencies:
@@ -2212,21 +2212,21 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "global-jsdom-example@workspace:."
   dependencies:
-    "@babel/core": ^7.10.5
-    "@babel/preset-env": ^7.10.4
-    "@babel/register": ^7.10.5
-    global-jsdom: ../
-    jsdom: ^21.0.0
-    mocha: ^10.0.0
+    "@babel/core": latest
+    "@babel/preset-env": latest
+    "@babel/register": latest
+    global-jsdom: latest
+    jsdom: latest
+    mocha: latest
   languageName: unknown
   linkType: soft
 
-"global-jsdom@file:../::locator=global-jsdom-example%40workspace%3A.":
+"global-jsdom@npm:latest":
   version: 8.7.0
-  resolution: "global-jsdom@file:../#../::hash=cb3ebc&locator=global-jsdom-example%40workspace%3A."
+  resolution: "global-jsdom@npm:8.7.0"
   peerDependencies:
     jsdom: ">=10.0.0 <22"
-  checksum: f77a686583e0acaaeabdfe34ad35f5d6fa20829c2a315c9dd01337b6aed3a4d52b3eba5305f603d5147772b3fa554e81b9e21877800a12a33aedb12bd4c21070
+  checksum: 67775c1d47e5593b1a6a9472b1b1eb95ab34bb44f2c58e73b857fdff16eed6630be443afa50056ecabddc2de26b6a3af1aea9dc15697da25021b2450296a6650
   languageName: node
   linkType: hard
 
@@ -2500,7 +2500,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^21.0.0":
+"jsdom@npm:latest":
   version: 21.0.0
   resolution: "jsdom@npm:21.0.0"
   dependencies:
@@ -2809,7 +2809,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mocha@npm:^10.0.0":
+"mocha@npm:latest":
   version: 10.2.0
   resolution: "mocha@npm:10.2.0"
   dependencies:
