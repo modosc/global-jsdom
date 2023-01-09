@@ -31,13 +31,13 @@
     "Rico Sta. Cruz <rico@ricostacruz.com>"
   ],
   "devDependencies": {
-    "chai": "^4.1.2",
-    "eslint": "^8.2.2",
+    "chai": "^4.3.7",
+    "eslint": "^8.31.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.1.0",
     "jsdom": "^21.0.0",
-    "mocha": "^10.0.0"
+    "mocha": "^10.2.0"
   },
   "homepage": "https://github.com/modosc/global-jsdom#readme",
   "keywords": [
@@ -59,7 +59,9 @@
   "scripts": {
     "test": "yarn test:esm && yarn test:commonjs",
     "test:esm": "yarn mocha --require test/setup.mjs test/*.test.mjs",
-    "test:commonjs": "yarn mocha --require test/setup.js test/*.test.js"
+    "test:commonjs": "yarn mocha --require test/setup.js test/*.test.js",
+    "lint": "yarn eslint --ext=js,mjs --cache .eslintrc.js commonjs/ esm/ test/",
+    "lint:fix": "yarn eslint --ext=js,mjs --cache --fix .eslintrc.js commonjs/ esm/ test/"
   },
   "packageManager": "yarn@3.3.1"
 }

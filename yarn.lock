@@ -31,7 +31,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:latest":
+"@babel/core@npm:^7.20.12":
   version: 7.20.12
   resolution: "@babel/core@npm:7.20.12"
   dependencies:
@@ -1106,7 +1106,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:latest":
+"@babel/preset-env@npm:^7.20.2":
   version: 7.20.2
   resolution: "@babel/preset-env@npm:7.20.2"
   dependencies:
@@ -1206,7 +1206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/register@npm:latest":
+"@babel/register@npm:^7.18.9":
   version: 7.18.9
   resolution: "@babel/register@npm:7.18.9"
   dependencies:
@@ -1791,7 +1791,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chai@npm:^4.1.2":
+"chai@npm:^4.3.7":
   version: 4.3.7
   resolution: "chai@npm:4.3.7"
   dependencies:
@@ -2323,7 +2323,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.7.0":
+"eslint-plugin-import@npm:^2.26.0":
   version: 2.26.0
   resolution: "eslint-plugin-import@npm:2.26.0"
   dependencies:
@@ -2393,7 +2393,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.2.2":
+"eslint@npm:^8.31.0":
   version: 8.31.0
   resolution: "eslint@npm:8.31.0"
   dependencies:
@@ -2797,16 +2797,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"global-jsdom-example@workspace:packages/examples":
+"global-jsdom-examples@workspace:packages/global-jsdom-examples":
   version: 0.0.0-use.local
-  resolution: "global-jsdom-example@workspace:packages/examples"
+  resolution: "global-jsdom-examples@workspace:packages/global-jsdom-examples"
   dependencies:
-    "@babel/core": latest
-    "@babel/preset-env": latest
-    "@babel/register": latest
-    global-jsdom: latest
-    jsdom: ">=10.0.0 <22"
-    mocha: ^10.0.0
+    "@babel/core": ^7.20.12
+    "@babel/preset-env": ^7.20.2
+    "@babel/register": ^7.18.9
+    eslint: ^8.31.0
+    eslint-config-airbnb-base: ^15.0.0
+    eslint-plugin-import: ^2.26.0
+    eslint-plugin-mocha: ^10.1.0
+    global-jsdom: "*"
+    jsdom: ^21.0.0
+    mocha: ^10.2.0
   languageName: unknown
   linkType: soft
 
@@ -2814,38 +2818,29 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "global-jsdom-workspace@workspace:."
   dependencies:
-    chai: ^4.1.2
-    eslint: ^8.2.2
+    chai: ^4.3.7
+    eslint: ^8.31.0
     eslint-config-airbnb-base: ^15.0.0
-    eslint-plugin-import: ^2.7.0
+    eslint-plugin-import: ^2.26.0
     eslint-plugin-mocha: ^10.1.0
     jsdom: ^21.0.0
-    mocha: ^10.0.0
+    mocha: ^10.2.0
   peerDependencies:
     jsdom: ">=10.0.0 <22"
   languageName: unknown
   linkType: soft
 
-"global-jsdom@npm:latest":
-  version: 8.7.0
-  resolution: "global-jsdom@npm:8.7.0"
-  peerDependencies:
-    jsdom: ">=10.0.0 <22"
-  checksum: 67775c1d47e5593b1a6a9472b1b1eb95ab34bb44f2c58e73b857fdff16eed6630be443afa50056ecabddc2de26b6a3af1aea9dc15697da25021b2450296a6650
-  languageName: node
-  linkType: hard
-
-"global-jsdom@workspace:packages/global-jsdom":
+"global-jsdom@*, global-jsdom@workspace:packages/global-jsdom":
   version: 0.0.0-use.local
   resolution: "global-jsdom@workspace:packages/global-jsdom"
   dependencies:
-    chai: ^4.1.2
-    eslint: ^8.2.2
+    chai: ^4.3.7
+    eslint: ^8.31.0
     eslint-config-airbnb-base: ^15.0.0
-    eslint-plugin-import: ^2.7.0
+    eslint-plugin-import: ^2.26.0
     eslint-plugin-mocha: ^10.1.0
     jsdom: ^21.0.0
-    mocha: ^10.0.0
+    mocha: ^10.2.0
   peerDependencies:
     jsdom: ">=10.0.0 <22"
   languageName: unknown
@@ -3308,7 +3303,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:>=10.0.0 <22, jsdom@npm:^21.0.0":
+"jsdom@npm:^21.0.0":
   version: 21.0.0
   resolution: "jsdom@npm:21.0.0"
   dependencies:
@@ -3685,7 +3680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mocha@npm:^10.0.0":
+"mocha@npm:^10.2.0":
   version: 10.2.0
   resolution: "mocha@npm:10.2.0"
   dependencies:
