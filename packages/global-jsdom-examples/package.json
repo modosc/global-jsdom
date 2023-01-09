@@ -1,19 +1,25 @@
 {
-  "name": "global-jsdom-example",
+  "name": "global-jsdom-examples",
   "version": "2.0.0-0",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/register": "^7.10.5",
-    "global-jsdom": "../",
-    "mocha": "^10.0.0"
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.1.0",
+    "global-jsdom": "*",
+    "mocha": "^10.2.0"
   },
   "dependencies": {
     "jsdom": "^21.0.0"
   },
   "scripts": {
+    "lint": "yarn eslint --ext=js,mjs --cache .eslintrc.js mocha module node",
+    "lint:fix": "yarn eslint --ext=js,mjs --cache --fix .eslintrc.js mocha module node",
     "node:module": "cd module && mocha test-module.js",
     "node:require": "npx mocha node/test-commonjs.js",
     "node:import": "npx mocha --require @babel/register node/test-esm.js",

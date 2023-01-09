@@ -1,4 +1,4 @@
-const jsdom = require('../commonjs')
+const jsdom = require('../commonjs/index.cjs')
 
 describe('jsdom-global', () => {
   beforeEach(() => global.document && global.document.destroy && global.document.destroy())
@@ -41,7 +41,7 @@ describe('jsdom-global', () => {
     it('works', () => {
       expectedKeys.forEach((k) => expect(global[k]).to.be.undefined)
       // eslint-disable-next-line global-require
-      require('../commonjs/register')
+      require('../commonjs/register.cjs')
       expectedKeys.forEach((k) => expect(global[k]).to.exist)
       global.document.destroy()
       expectedKeys.forEach((k) => expect(global[k]).to.be.undefined)

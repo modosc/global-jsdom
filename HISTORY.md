@@ -1,3 +1,6 @@
+## [unreleased]
+- move to yarn v3 workspace
+
 ## [v8.7.0]
 - Relax jsdom peer dependency for jsdom 21
 - update deps
