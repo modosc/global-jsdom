@@ -1,7 +1,6 @@
 {
   "name": "global-jsdom-workspace",
   "description": "Enable DOM in Node.js",
-  "version": "8.7.0",
   "author": {
     "name": "jonathan schatz",
     "email": "jon@divisionbyzero.com",
