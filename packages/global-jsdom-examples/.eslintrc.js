@@ -1,3 +1,3 @@
 module.exports = {
-  extends: '../global-jsdom/test/.eslintrc.js',
+  extends: '../global-jsdom/test/.eslintrc.cjs',
 }
