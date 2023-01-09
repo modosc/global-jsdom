@@ -1,13 +1,7 @@
 version: 2
 updates:
 - package-ecosystem: npm
-  directory: "/packages/global-jsdom"
-  schedule:
-    interval: daily
-    time: "13:00"
-  open-pull-requests-limit: 10
-- package-ecosystem: npm
-  directory: "/packages/global-jsdom-examples"
+  directory: "/"
   schedule:
     interval: daily
     time: "13:00"
