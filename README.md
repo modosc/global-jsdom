@@ -123,6 +123,27 @@ import jQuery from 'jquery'
 // ...
 ```
 
+## Typescript
+
+The library includes automatic support providing the necessary type declarations for an integration without further configuration.
+
+```ts
+import globalJsdom from "global-jsdom";
+
+describe("Typescript test example", () => {
+	let cleanup: { (): void };
+
+	before(() => {
+		cleanup = globalJsdom();
+	});
+
+	after(() => {
+		cleanup();
+	});
+
+})
+```
+
 ## Migration from `jsdom-global`
 1. `browserify` support is dropped - I have no way to test this and `webpack` started giving higher priority to the `browser` field in `package.json` than `module`
 

@@ -20,6 +20,7 @@
   },
   "module": "./esm/index.mjs",
   "main": "./commonjs/index.cjs",
+  "types": "types/index.d.ts",
   "files": [
     "commonjs/*",
     "esm/*"
