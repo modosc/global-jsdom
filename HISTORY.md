@@ -1,5 +1,6 @@
-## [unreleased]
+## [8.8.0] - {2023-03-20}
 - move to yarn v3 workspace
+- add typescript types (https://github.com/modosc/global-jsdom/pull/292)
 
 ## [v8.7.0]
 - Relax jsdom peer dependency for jsdom 21
