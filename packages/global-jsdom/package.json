@@ -23,7 +23,8 @@
   "types": "types/index.d.ts",
   "files": [
     "commonjs/*",
-    "esm/*"
+    "esm/*",
+    "types/*"
   ],
   "bugs": {
     "url": "https://github.com/modosc/global-jsdom/issues"
