@@ -131,15 +131,15 @@ The library includes automatic support providing the necessary type declarations
 import globalJsdom from "global-jsdom";
 
 describe("Typescript test example", () => {
-	let cleanup: { (): void };
+  let cleanup: { (): void };
 
-	before(() => {
-		cleanup = globalJsdom();
-	});
+  before(() => {
+      cleanup = globalJsdom();
+  });
 
-	after(() => {
-		cleanup();
-	});
+  after(() => {
+    cleanup();
+  });
 
 })
 ```
