@@ -6,7 +6,7 @@
 `global-jsdom` will inject `document`, `window` and other DOM API into your Node.js environment. This allows you to run browser tests in Node.js. The specific attributes set on `global` come directly from the `jsdom` version you have installed.
 ## Install
 
-Requires [node][] >= 12 and [jsdom][] >= 10 or above
+Requires [node][] >= 16 and [jsdom][] >= 22 or above
 
 ```
 npm install --save-dev --save-exact jsdom global-jsdom

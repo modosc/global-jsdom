@@ -1,7 +1,7 @@
 {
   "name": "global-jsdom",
   "description": "Enable DOM in Node.js",
-  "version": "8.8.0",
+  "version": "9.0.0",
   "author": {
     "name": "jonathan schatz",
     "email": "jon@divisionbyzero.com",
@@ -49,7 +49,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "jsdom": ">=10.0.0 <23"
+    "jsdom": ">=22 <23"
   },
   "engines": {
     "node": ">=16"
