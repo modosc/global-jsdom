@@ -1,3 +1,7 @@
+## [9.0.0] - {2023-05-03}
+- Relax jsdom peer dependency for jsdom 22
+- Raise minimum required node version to v16
+
 ## [8.8.0] - {2023-03-20}
 - move to yarn v3 workspace
 - add typescript types (https://github.com/modosc/global-jsdom/pull/292)
