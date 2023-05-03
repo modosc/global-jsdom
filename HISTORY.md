@@ -1,3 +1,6 @@
+## [9.0.1] - {2023-05-03}
+- Add README.md to global-jsdom package directory
+
 ## [9.0.0] - {2023-05-03}
 - Raise minimum jsdom peer dependency to v22
 - Raise minimum required node version to v16
