@@ -144,9 +144,6 @@ describe("Typescript test example", () => {
 })
 ```
 
-## Migration from `jsdom-global`
-1. `browserify` support is dropped - I have no way to test this and `webpack` started giving higher priority to the `browser` field in `package.json` than `module`
-
 ## Thanks
 
 original code forked from [jsdom-global](https://github.com/rstacruz/jsdom-global)
