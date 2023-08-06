@@ -5,3 +5,5 @@ declare module "global-jsdom" {
 
 	export = globalJsdom;
 }
+
+declare var $jsdom: import('jsdom').JSDOM
