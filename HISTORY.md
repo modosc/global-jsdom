@@ -1,3 +1,6 @@
+## [9.1.0] - {2023-08-06}
+- feature: add type information to the `$jsdom` global variable (https://github.com/modosc/global-jsdom/pull/292)
+
 ## [9.0.1] - {2023-05-03}
 - Add README.md to global-jsdom package directory
 
