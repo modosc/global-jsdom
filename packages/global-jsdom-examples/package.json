@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.22.9",
+    "@babel/core": "^7.22.20",
     "@babel/preset-env": "^7.22.9",
     "@babel/register": "^7.22.5",
     "eslint": "^8.46.0",
