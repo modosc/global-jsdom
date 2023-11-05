@@ -11,7 +11,8 @@
   "exports": {
     ".": {
       "require": "./commonjs/index.cjs",
-      "default": "./esm/index.mjs"
+      "default": "./esm/index.mjs",
+      "types": "./types/index.d.ts"
     },
     "./register": {
       "require": "./commonjs/register.cjs",
