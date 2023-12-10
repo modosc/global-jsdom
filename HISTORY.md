@@ -1,7 +1,7 @@
-## unreleased
+## [9.2.0] - {2023-12-10}
 - task: upgrade to `yarn@4.0.2`
 - fix: TS error 7016 (https://github.com/modosc/global-jsdom/pull/363)
-- task: Relax jsdom peer dependency for jsdom 23
+- task: Relax jsdom peer dependency for jsdom 23 (https://github.com/modosc/global-jsdom/pull/366)
 
 ## [9.1.0] - {2023-08-06}
 - feature: add type information to the `$jsdom` global variable (https://github.com/modosc/global-jsdom/pull/292)
