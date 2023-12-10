@@ -39,7 +39,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-mocha": "^10.2.0",
-    "jsdom": "^22.1.0",
+    "jsdom": "^23.0.1",
     "mocha": "^10.2.0"
   },
   "homepage": "https://github.com/modosc/global-jsdom#readme",
@@ -50,7 +50,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "jsdom": ">=22 <23"
+    "jsdom": ">=23 <24"
   },
   "engines": {
     "node": ">=16"
