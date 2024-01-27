@@ -1,3 +1,7 @@
+## [24.0.0] - {2024-01-27}
+- Peg major version to `jsdom` major version
+- Raise minimum required node version to v18
+
 ## [9.2.0] - {2023-12-10}
 - task: upgrade to `yarn@4.0.2`
 - fix: TS error 7016 (https://github.com/modosc/global-jsdom/pull/363)
