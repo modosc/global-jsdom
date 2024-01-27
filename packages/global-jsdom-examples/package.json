@@ -15,7 +15,7 @@
     "mocha": "^10.2.0"
   },
   "dependencies": {
-    "jsdom": "^23.0.1"
+    "jsdom": "^24.0.0"
   },
   "scripts": {
     "lint": "yarn eslint --ext=js,mjs --cache .eslintrc.js mocha module node",
