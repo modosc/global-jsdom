@@ -61,8 +61,8 @@
   },
   "scripts": {
     "test": "yarn test:esm && yarn test:commonjs",
-    "test:esm": "yarn mocha --require test/setup.mjs test/*.test.mjs",
-    "test:commonjs": "yarn mocha --require test/setup.cjs test/*.test.cjs",
+    "test:esm": "yarn mocha --require chai/register-expect.js test/*.test.mjs",
+    "test:commonjs": "yarn mocha --require chai/register-expect.js test/*.test.cjs",
     "lint": "yarn eslint --ext=cjs,mjs --cache .eslintrc.cjs commonjs/ esm/ test/",
     "lint:fix": "yarn eslint --ext=cjs,mjs --cache --fix .eslintrc.cjs commonjs/ esm/ test/"
   }
