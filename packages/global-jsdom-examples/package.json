@@ -1,12 +1,10 @@
 {
   "name": "global-jsdom-examples",
   "version": "2.1.0",
+  "type": "module",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/preset-env": "^7.23.9",
-    "@babel/register": "^7.23.7",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
@@ -18,14 +16,14 @@
     "jsdom": "^24.0.0"
   },
   "scripts": {
-    "lint": "yarn eslint --ext=js,mjs --cache .eslintrc.js mocha module node",
-    "lint:fix": "yarn eslint --ext=js,mjs --cache --fix .eslintrc.js mocha module node",
+    "lint": "yarn eslint --ext=cjs,js --cache .eslintrc.cjs mocha module node",
+    "lint:fix": "yarn eslint --ext=cjs,js --cache --fix .eslintrc.js mocha module node",
     "node:module": "cd module && mocha test-module.js",
-    "node:require": "npx mocha node/test-commonjs.js",
-    "node:import": "npx mocha --require @babel/register node/test-esm.js",
+    "node:require": "npx mocha node/test-commonjs.cjs",
+    "node:import": "npx mocha  node/test-esm.js",
     "node": "npm run node:require && npm run node:import && npm run node:module",
-    "mocha:require": "npx mocha --require global-jsdom/register mocha/test-commonjs.js",
-    "mocha:import": "npx mocha  --require @babel/register --require global-jsdom/register mocha/test-esm.js",
+    "mocha:require": "npx mocha --require global-jsdom/register mocha/test-commonjs.cjs",
+    "mocha:import": "npx mocha --require global-jsdom/register mocha/test-esm.js",
     "mocha": "npm run mocha:require && npm run mocha:import",
     "test": "npm run node && npm run mocha"
   }
