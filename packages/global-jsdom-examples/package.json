@@ -10,17 +10,15 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-mocha": "^10.2.0",
     "global-jsdom": "*",
+    "jsdom": "^24.0.0",
     "mocha": "^10.2.0"
-  },
-  "dependencies": {
-    "jsdom": "^24.0.0"
   },
   "scripts": {
     "lint": "yarn eslint --ext=cjs,js --cache .eslintrc.cjs mocha module node",
-    "lint:fix": "yarn eslint --ext=cjs,js --cache --fix .eslintrc.js mocha module node",
+    "lint:fix": "yarn eslint --ext=cjs,js --cache --fix .eslintrc.cjs mocha module node",
     "node:module": "cd module && mocha test-module.js",
     "node:require": "npx mocha node/test-commonjs.cjs",
-    "node:import": "npx mocha  node/test-esm.js",
+    "node:import": "npx mocha node/test-esm.js",
     "node": "npm run node:require && npm run node:import && npm run node:module",
     "mocha:require": "npx mocha --require global-jsdom/register mocha/test-commonjs.cjs",
     "mocha:import": "npx mocha --require global-jsdom/register mocha/test-esm.js",
