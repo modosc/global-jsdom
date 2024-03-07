@@ -952,15 +952,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-mocha@npm:^10.2.0":
-  version: 10.2.0
-  resolution: "eslint-plugin-mocha@npm:10.2.0"
+"eslint-plugin-mocha@npm:^10.4.0":
+  version: 10.4.0
+  resolution: "eslint-plugin-mocha@npm:10.4.0"
   dependencies:
     eslint-utils: "npm:^3.0.0"
+    globals: "npm:^14.0.0"
     rambda: "npm:^7.4.0"
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: 10/d28f98ffa2a4bda46811310a55b8830ae1105b61c2817069975ac927010fee199671352714b17ddf87d4d0c54dbc0e1fdc1f3739604a2f6591f0a200f3cdbab3
+  checksum: 10/8185ca2c51ea905d1e369fb3eca946667bdf841b7e78701dd2712121f314780eb7dc86741607db54aa7c118dcd731b488f8cbbc56db38f4f00440f503713358a
   languageName: node
   linkType: hard
 
@@ -1373,7 +1374,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-airbnb-base: "npm:^15.0.0"
     eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-mocha: "npm:^10.2.0"
+    eslint-plugin-mocha: "npm:^10.4.0"
     global-jsdom: "npm:*"
     jsdom: "npm:^24.0.0"
     mocha: "npm:^10.2.0"
@@ -1388,7 +1389,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-airbnb-base: "npm:^15.0.0"
     eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-mocha: "npm:^10.2.0"
+    eslint-plugin-mocha: "npm:^10.4.0"
     jsdom: "npm:^24.0.0"
     mocha: "npm:^10.2.0"
   peerDependencies:
@@ -1404,7 +1405,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-airbnb-base: "npm:^15.0.0"
     eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-mocha: "npm:^10.2.0"
+    eslint-plugin-mocha: "npm:^10.4.0"
     jsdom: "npm:^24.0.0"
     mocha: "npm:^10.2.0"
   peerDependencies:
@@ -1418,6 +1419,13 @@ __metadata:
   dependencies:
     type-fest: "npm:^0.20.2"
   checksum: 10/f365fc2a4eb21a264d0f2a6355ddf4ee32983e0817ec48a517a56d7d1944124c763e81cae13ae26fa9a7d6c7ab826b2e796f87b022a674336275da0e6249366e
+  languageName: node
+  linkType: hard
+
+"globals@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "globals@npm:14.0.0"
+  checksum: 10/03939c8af95c6df5014b137cac83aa909090c3a3985caef06ee9a5a669790877af8698ab38007e4c0186873adc14c0b13764acc754b16a754c216cc56aa5f021
   languageName: node
   linkType: hard
 
