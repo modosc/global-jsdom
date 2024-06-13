@@ -5,12 +5,22 @@ describe('jsdom-global', () => {
   beforeEach(() => global.document && global.document.destroy && global.document.destroy())
   afterEach(() => global.document && global.document.destroy && global.document.destroy())
 
-  const expectedKeys = ['document', 'alert', 'requestAnimationFrame']
+  const expectedKeys = ['document', 'alert', 'requestAnimationFrame', 'NodeList']
 
   describe('initialization and cleanup', () => {
     it('works', () => {
       expectedKeys.forEach((k) => expect(global[k]).to.be.undefined)
       const cleanup = jsdom()
+      expectedKeys.forEach((k) => expect(global[k]).to.exist)
+      cleanup()
+      expectedKeys.forEach((k) => expect(global[k]).to.be.undefined)
+    })
+  })
+
+  describe('initialization and cleanup with `scripts: dangerously`', () => {
+    it('works', () => {
+      expectedKeys.forEach((k) => expect(global[k]).to.be.undefined)
+      const cleanup = jsdom(undefined, { runScripts: 'dangerously' })
       expectedKeys.forEach((k) => expect(global[k]).to.exist)
       cleanup()
       expectedKeys.forEach((k) => expect(global[k]).to.be.undefined)
