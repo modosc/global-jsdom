@@ -952,16 +952,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-mocha@npm:^10.4.3":
-  version: 10.4.3
-  resolution: "eslint-plugin-mocha@npm:10.4.3"
+"eslint-plugin-mocha@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "eslint-plugin-mocha@npm:10.5.0"
   dependencies:
     eslint-utils: "npm:^3.0.0"
     globals: "npm:^13.24.0"
     rambda: "npm:^7.4.0"
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: 10/3db26ed8f70fb70e940069c3318c62584838f3dbf02fdd455967e8f9aa62815e383d2ea9eaede339c95e8e3100908b54b5ac86664cfe80fff802c9c7453f7906
+  checksum: 10/cc2e9cc8efda173967fb31a27b5ebbab989a20a06fd310bb88e4ddf4299c1445365b48c74eadf37eacffb1b16386e5a866ed098a2c242ad61763aea17f324c83
   languageName: node
   linkType: hard
 
@@ -1373,7 +1373,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-airbnb-base: "npm:^15.0.0"
     eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-mocha: "npm:^10.4.3"
+    eslint-plugin-mocha: "npm:^10.5.0"
     global-jsdom: "npm:*"
     jsdom: "npm:^24.0.0"
     mocha: "npm:^10.4.0"
@@ -1388,7 +1388,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-airbnb-base: "npm:^15.0.0"
     eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-mocha: "npm:^10.4.3"
+    eslint-plugin-mocha: "npm:^10.5.0"
     jsdom: "npm:^24.0.0"
     mocha: "npm:^10.4.0"
   peerDependencies:
@@ -1404,7 +1404,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-airbnb-base: "npm:^15.0.0"
     eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-mocha: "npm:^10.4.3"
+    eslint-plugin-mocha: "npm:^10.5.0"
     jsdom: "npm:^24.0.0"
     mocha: "npm:^10.4.0"
   peerDependencies:
