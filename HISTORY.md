@@ -1,3 +1,6 @@
+## [25.0.0] - {2024-09-17}
+- Raise minimum jsdom peer dependency to v25
+
 ## [24.0.0] - {2024-01-27}
 - Peg major version to `jsdom` major version
 - Raise minimum required node version to v18
