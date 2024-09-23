@@ -10,7 +10,7 @@
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-mocha": "^10.5.0",
     "global-jsdom": "*",
-    "jsdom": "^25.0.0",
+    "jsdom": "^25.0.1",
     "mocha": "^10.7.3"
   },
   "scripts": {
