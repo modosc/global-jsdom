@@ -1,3 +1,6 @@
+## [26.0.0] - {2025-01-10}
+- Raise minimum jsdom peer dependency to v26
+
 ## [25.0.0] - {2024-09-17}
 - Raise minimum jsdom peer dependency to v25
 
