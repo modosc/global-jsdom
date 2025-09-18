@@ -1,37 +1,52 @@
+## {27.0.0} - {2025-09-18}
+
+- Rase minimum `jsdom` peer dependency to v27
+- Raise minimum required `node` version to v20
+
 ## [26.0.0] - {2025-01-10}
-- Raise minimum jsdom peer dependency to v26
+
+- Raise minimum `jsdom` peer dependency to v26
 
 ## [25.0.0] - {2024-09-17}
-- Raise minimum jsdom peer dependency to v25
+
+- Raise minimum `jsdom` peer dependency to v25
 
 ## [24.0.0] - {2024-01-27}
+
 - Peg major version to `jsdom` major version
-- Raise minimum required node version to v18
+- Raise minimum required `node` version to v18
 
 ## [9.2.0] - {2023-12-10}
+
 - task: upgrade to `yarn@4.0.2`
 - fix: TS error 7016 (https://github.com/modosc/global-jsdom/pull/363)
 - task: Relax jsdom peer dependency for jsdom 23 (https://github.com/modosc/global-jsdom/pull/366)
 
 ## [9.1.0] - {2023-08-06}
+
 - feature: add type information to the `$jsdom` global variable (https://github.com/modosc/global-jsdom/pull/292)
 
 ## [9.0.1] - {2023-05-03}
+
 - Add README.md to global-jsdom package directory
 
 ## [9.0.0] - {2023-05-03}
+
 - Raise minimum jsdom peer dependency to v22
 - Raise minimum required node version to v16
 
 ## [8.8.0] - {2023-03-20}
+
 - move to yarn v3 workspace
 - add typescript types (https://github.com/modosc/global-jsdom/pull/292)
 
 ## [v8.7.0]
+
 - Relax jsdom peer dependency for jsdom 21
 - update deps
 
 ## [v8.6.0]
+
 - (really) fix jsdom peerDep
 - fix(perf): consolidate window key filtering https://github.com/modosc/global-jsdom/pull/256
 - update semver for jsdom in peerDeps (fixes #245) https://github.com/modosc/global-jsdom/pull/259
@@ -39,25 +54,31 @@
 - remove babel deps
 
 ## [v8.5.0]
+
 - Relax jsdom peer dependency for jsdom 20
 - Update deps
 
 ## [v8.4.0]
+
 - Relax jsdom peer dependency for jsdom 19
 - Update deps
 
 ## [v8.3.0]
+
 - Relax jsdom peer dependency for jsdom 18
 - Update deps
 
 ## [v8.2.0]
+
 - Relax jsdom peer dependency for jsdom 17
 
 ## [v8.1.0]
+
 - Fix jsdom peer dependency version specifier https://github.com/modosc/global-jsdom/pull/126
 - Update deps
 
 ## [v8.0.0]
+
 > Feb 10, 2021
 
 - **BREAKING CHANGE** `babel` usage removed, Node v12 or greater is required
@@ -66,43 +87,49 @@
   [enable a node flag](https://nodejs.org/api/esm.html#esm_conditional_exports)
 
 ## [v5.0.0]
+
 > Jul 14, 2019
 
 - Handle jsdom 15
-[v5.0.0]: https://github.com/modosc/global-jsdom/compare/v4.3.0...v5.0.0
-
+  [v5.0.0]: https://github.com/modosc/global-jsdom/compare/v4.3.0...v5.0.0
 
 ## [v4.3.0]
+
 > Jul 14, 2019
 
 - Update deps
-[v4.3.0]: https://github.com/modosc/global-jsdom/compare/v4.2.0...v4.3.0
+  [v4.3.0]: https://github.com/modosc/global-jsdom/compare/v4.2.0...v4.3.0
 
 ## [v4.2.0]
+
 > Oct 19, 2017
 
 - Just kidding, use `global.$jsdom` instead.
-[v4.2.0]: https://github.com/modosc/global-jsdom/compare/v4.1.0...v4.2.0
+  [v4.2.0]: https://github.com/modosc/global-jsdom/compare/v4.1.0...v4.2.0
 
 ## [v4.1.0]
+
 > Oct 18, 2017
 
 - Don't clobber `global.jsdom`, use `global._jsdom` instead
-[v4.1.0]: https://github.com/modosc/global-jsdom/compare/v4.0.0...v4.1.0
+  [v4.1.0]: https://github.com/modosc/global-jsdom/compare/v4.0.0...v4.1.0
 
 ## [v8.3.0]
+
 - Relax jsdom peer dependency for jsdom 18
 - Update deps## [v4.0.0]
-> Oct 18, 2017
+
+  > Oct 18, 2017
 
 - Update peerDeps for jsdom 11
 - Add es module export
 - Drop browserify support
 - Add access to global.jsdom instance
-[v4.0.0]: https://github.com/modosc/global-jsdom/compare/v3.0.2...v4.0.0
+  [v4.0.0]: https://github.com/modosc/global-jsdom/compare/v3.0.2...v4.0.0
 
 ## [v3.0.2]
-> May  8, 2017
+
+> May 8, 2017
 
 - [#17] - Fix issue with `Image`. ([@jtag05])
 - [#16] - Mark jsdom as a peer dependency. ([@Cinematique])
@@ -110,13 +137,15 @@
 [v3.0.2]: https://github.com/modosc/global-jsdom/compare/v3.0.0...v3.0.2
 
 ## [v3.0.0]
-> May  8, 2017
+
+> May 8, 2017
 
 - [#23] - jsdom-global now requires jsdom v10. ([@GinjiBan])
 
 [v3.0.0]: https://github.com/modosc/global-jsdom/compare/v2.1.1...v3.0.0
 
 ## [v2.1.1]
+
 > Dec 24, 2016
 
 - [#11] - Fix issues with XMLHttpRequest.
@@ -124,6 +153,7 @@
 [v2.1.1]: https://github.com/modosc/global-jsdom/compare/v2.1.0...v2.1.1
 
 ## [v2.1.0]
+
 > Aug 22, 2016
 
 - [#6], [#7] - Fix support for jsdom 9.4.0.
@@ -131,6 +161,7 @@
 [v2.1.0]: https://github.com/modosc/global-jsdom/compare/v2.0.0...v2.1.0
 
 ## [v2.0.0]
+
 > May 13, 2016
 
 - [#3] - Allow overriding `html` and `options` being passed to jsdom. ([#5], [@kenjiru])
@@ -139,6 +170,7 @@
 [v2.0.0]: https://github.com/modosc/global-jsdom/compare/v1.7.0...v2.0.0
 
 ## [v1.7.0]
+
 > Mar 21, 2016
 
 - Implement `jsdom-global/register` for use in simpler cases.
@@ -146,6 +178,7 @@
 [v1.7.0]: https://github.com/modosc/global-jsdom/compare/v1.6.2...v1.7.0
 
 ## [v1.6.2]
+
 > Feb 22, 2016
 
 - Fix typo in browser.js.
@@ -153,14 +186,16 @@
 [v1.6.2]: https://github.com/modosc/global-jsdom/compare/v1.6.1...v1.6.2
 
 ## [v1.6.1]
+
 > Jan 15, 2016
 
 - Make `jsdomGlobal()` idempotent - that is, you may call it twice and expect
-the same result without any side effects.
+  the same result without any side effects.
 
 [v1.6.1]: https://github.com/modosc/global-jsdom/compare/v1.5.0...v1.6.1
 
 ## [v1.5.0]
+
 > Jan 12, 2016
 
 - Remove tape integration... we don't need it.
@@ -168,6 +203,7 @@ the same result without any side effects.
 [v1.5.0]: https://github.com/modosc/global-jsdom/compare/v1.4.0...v1.5.0
 
 ## [v1.4.0]
+
 > Jan 12, 2016
 
 - `tape`: Shows navigator userAgent in tape output.
@@ -175,6 +211,7 @@ the same result without any side effects.
 [v1.4.0]: https://github.com/modosc/global-jsdom/compare/v1.3.0...v1.4.0
 
 ## [v1.3.0]
+
 > Jan 11, 2016
 
 - Add browserify support.
@@ -182,6 +219,7 @@ the same result without any side effects.
 [v1.3.0]: https://github.com/modosc/global-jsdom/compare/v1.2.0...v1.3.0
 
 ## [v1.2.0]
+
 > Jan 11, 2016
 
 - Fix compatibility with legacy Node.js versions.
@@ -189,6 +227,7 @@ the same result without any side effects.
 [v1.2.0]: https://github.com/modosc/global-jsdom/compare/v1.1.0...v1.2.0
 
 ## [v1.1.0]
+
 > Jan 11, 2016
 
 - Add `cleanup()`.
@@ -196,6 +235,7 @@ the same result without any side effects.
 [v1.1.0]: https://github.com/modosc/global-jsdom/compare/v1.0.0...v1.1.0
 
 ## [v1.0.0]
+
 > Jan 11, 2016
 
 - Initial release.
