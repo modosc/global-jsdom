@@ -1451,7 +1451,7 @@ __metadata:
     jsdom: "npm:^27.0.0"
     mocha: "npm:^11.7.2"
   peerDependencies:
-    jsdom: ">=24 <25"
+    jsdom: ">=27 <28"
   languageName: unknown
   linkType: soft
 
