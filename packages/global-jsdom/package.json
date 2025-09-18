@@ -1,7 +1,7 @@
 {
   "name": "global-jsdom",
   "description": "Enable DOM in Node.js",
-  "version": "26.0.0",
+  "version": "27.0.0",
   "author": {
     "name": "jonathan schatz",
     "email": "jon@divisionbyzero.com",
@@ -34,13 +34,13 @@
     "Rico Sta. Cruz <rico@ricostacruz.com>"
   ],
   "devDependencies": {
-    "chai": "^5.1.1",
-    "eslint": "^8.56.0",
+    "chai": "^6.0.1",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-mocha": "^10.5.0",
-    "jsdom": "^26.0.0",
-    "mocha": "^10.7.3"
+    "jsdom": "^27.0.0",
+    "mocha": "^11.7.2"
   },
   "homepage": "https://github.com/modosc/global-jsdom#readme",
   "keywords": [
@@ -50,10 +50,10 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "jsdom": ">=26 <27"
+    "jsdom": ">=27 <28"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "repository": {
     "type": "git",
