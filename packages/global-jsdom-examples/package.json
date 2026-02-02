@@ -11,7 +11,7 @@
     "eslint-plugin-mocha": "^10.5.0",
     "global-jsdom": "*",
     "jsdom": "^28.0.0",
-    "mocha": "^11.7.2"
+    "mocha": "^11.7.5"
   },
   "scripts": {
     "lint": "yarn eslint --ext=cjs,js --cache .eslintrc.cjs mocha module node",
