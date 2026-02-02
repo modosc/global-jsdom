@@ -1,3 +1,7 @@
+## {28.0.0} - {2026-02-02}
+
+- Raise minimum `jsdom` peer dependency to v28
+
 ## {27.0.0} - {2025-09-18}
 
 - Rase minimum `jsdom` peer dependency to v27
